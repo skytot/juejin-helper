@@ -19,7 +19,6 @@ class Task {
 
 class GrowthTask extends Task {
   taskName = "成长任务";
-
   todayStatus = 0; // 未签到
   incrPoint = 0;
   sumPoint = 0; // 当前矿石数
