@@ -4,7 +4,7 @@ module.exports = {
   /* 掘金Cookie */
   COOKIE: env.COOKIE,
   /* GLADNS Cookie */
-  GKEY: env.GKEY,
+  GKEY: "koa:sess=eyJ1c2VySWQiOjYzMDYyOCwiX2V4cGlyZSI6MTgwMTEwMjkyOTEzNiwiX21heEFnZSI6MjU5MjAwMDAwMDB9; koa:sess.sig=Y7_qXDRmR1QgUkR9r2ilm9m42kw",
   /* 多用户掘金Cookie, 当有1名以上用户时填写, 支持同时最多可配置5名用户 */
   COOKIE_2: env.COOKIE_2,
   COOKIE_3: env.COOKIE_3,
