@@ -2,7 +2,7 @@ import notification from "./utils/notification-kit";
 const JuejinHelper = require("juejin-helper");
 const utils = require("./utils/utils");
 const env = require("./utils/env");
-
+const GladosCheckIn = require("./glados");
 class Task {
   constructor(juejin) {
     this.juejin = juejin;
@@ -42,6 +42,12 @@ class GrowthTask extends Task {
     const counts = await growth.getCounts();
     this.contCount = counts.cont_count;
     this.sumCount = counts.sum_count;
+
+    //gladns 签到
+    const gladosCookie = env.GKEY;
+    const gladosTask = new GladosCheckIn(gladosCookie);
+    const gladosContent = await gladosTask.run()
+    console.log('gladns 签到QD:',gladosContent);
   }
 }
 
