@@ -46,6 +46,7 @@ class GrowthTask extends Task {
     //gladns 签到
     const gladosCookie = env.GKEY;
     console.log('gladns 签到QD:',env);
+    console.log(process.env.GKEY)
     const gladosTask = new GladosCheckIn(gladosCookie);
     const gladosContent = await gladosTask.run()
     console.log('gladns 签到QD:',gladosContent);
